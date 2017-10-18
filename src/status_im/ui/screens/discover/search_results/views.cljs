@@ -6,7 +6,7 @@
             [status-im.i18n :as i18n]
             [status-im.ui.screens.discover.styles :as styles]
             [status-im.ui.screens.contacts.styles :as contacts-styles]
-            [status-im.components.toolbar.view :as toolbar]))
+            [status-im.ui.components.toolbar.view :as toolbar]))
 
 ;; TOOD(oskarth): Refactor this, very similar to discover-all-hashtags view
 (defview discover-search-results []
