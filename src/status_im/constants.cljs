@@ -25,6 +25,13 @@
 
 (def default-network "testnet_rpc")
 
+(def default-wallet-transactions
+  {:filters
+   {:type [{:id :inbound   :label "Incoming"  :checked? true}
+           {:id :outbound  :label "Outgoing"  :checked? true}
+           {:id :pending   :label "Pending"   :checked? true}
+           {:id :postponed :label "Postponed" :checked? true}]}})
+
 (defn- transform-config [networks]
   (->> networks
        (map (fn [[network-name {:keys [config] :as data}]]

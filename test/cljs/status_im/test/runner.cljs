@@ -5,6 +5,7 @@
             [status-im.test.accounts.events]
             [status-im.test.wallet.events]
             [status-im.test.wallet.transactions.subs]
+            [status-im.test.wallet.transactions.views]
             [status-im.test.profile.events]
             [status-im.test.bots.events]
             [status-im.test.chat.models.input]
@@ -38,6 +39,7 @@
  'status-im.test.wallet.events
  'status-im.test.bots.events
  'status-im.test.wallet.transactions.subs
+ 'status-im.test.wallet.transactions.views
  'status-im.test.chat.models.input
  'status-im.test.components.main-tabs
  'status-im.test.i18n

@@ -20,6 +20,7 @@
   "
   (:require [reagent.core :as r]
             [status-im.components.list.styles :as lst]
+            [status-im.components.checkbox.view :as checkbox]
             [status-im.components.react :as rn]
             [status-im.components.icons.vector-icons :as vi]
             [status-im.utils.platform :as p]))
@@ -71,6 +72,11 @@
 (defn item-content
   [& children]
   (into [rn/view {:style lst/item-text-view}] (keep identity children)))
+
+(defn item-checkbox
+  [{:keys [style] :as props}]
+  [rn/view {:style (merge style lst/item-checkbox)}
+   [checkbox/checkbox props]])
 
 (defn- wrap-render-fn [f]
   (fn [data]

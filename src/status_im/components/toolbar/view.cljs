@@ -78,6 +78,7 @@
 (defn- icon-action [icon icon-opts handler]
   [rn/touchable-highlight {:on-press handler}
    [rn/view {:style (merge tst/item tst/toolbar-action)}
+    [rn/view (:overlay-style icon-opts)]
     [vi/icon icon icon-opts]]])
 
 (defn actions [v]
