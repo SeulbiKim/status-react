@@ -22,7 +22,7 @@
 (def device-event-emitter (.-DeviceEventEmitter rn-dependencies/react-native))
 (def dismiss-keyboard! rn-dependencies/dismiss-keyboard)
 (def orientation rn-dependencies/orientation)
-(def back-android (get-react-property "BackAndroid"))
+(def back-handler (get-react-property "BackHandler"))
 (def drawer rn-dependencies/drawer)
 
 (def splash-screen (.-SplashScreen native-modules))
@@ -37,7 +37,7 @@
 (def view (get-class "View"))
 
 (def status-bar (get-class "StatusBar"))
-(def drawer-layout (adapt-class drawer))
+(def drawer-layout (adapt-class (.-default drawer)))
 
 (def list-view-class (get-class "ListView"))
 (def scroll-view (get-class "ScrollView"))
@@ -188,7 +188,3 @@
                        [keyboard-avoiding-view-class (merge {:behavior :padding} props)]
                        [view props])]
     (vec (concat view-element children))))
-
-;; Emoji
-
-(def emojilib (js/require "emojilib"))
